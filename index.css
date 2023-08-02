@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bellota', cursive;
+    font-size: 16px;
+    user-select: none;
+    background-color: #9F9793;
+    color: #603A40;
+}
+
+/* Typography */
+
+h1, h2, nav {
+    font-family: 'Meow Script', cursive;
+    margin: 0;
+}
+
+h1, h2 {
+    color: #440D0F;
+}
+
+nav {
+    font-size: 40px;
+    font-weight: 900;
+    color: whitesmoke;
+}
+
+h1 {
+    font-size: 38px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.grow {
+    font-size: 20px;
+}
+
+/* Links and buttons */
+
+.btn {
+    padding: 8px 12px;
+    border: none;
+    border-radius: 10px;
+    background: #603A40;
+    color: whitesmoke;
+    font-weight: 600;
+    font-size: 16px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn:hover, .btn:focus {
+    background-color: #78171A;
+    color: whitesmoke;
+}
+
+/* Layout */
+
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    text-align: center;
+    padding: 20px 0;
+    background-color: #84596B;
+    box-shadow: 0px 1px 5px #84596B;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: end;
+}
+
+.recipe-container {
+    /* border: 1px dotted blue; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    gap: 20px;
+    box-shadow: 1px 1px 5px #84596B;
+    background-color: #AF9BB6;
+    border-radius: 10px;
+}
+
+.ingredients, .steps {
+    width: 100%;
+}
+
+ul, ol {
+    margin: 0;
+}
+
+ul {
+    box-sizing: border-box;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px 8px;
+}
+
+ul li,
+ol li {
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #440D0F;
+    background-color: whitesmoke;
+    font-weight: 600;
+}
+
+ul li {
+    padding: 10px 8px;
+}
+
+ol {
+    box-sizing: border-box;
+    padding: 0 0 0 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+ol li {
+    box-sizing: border-box;
+    padding: 10px 15px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.line {
+    width: 100%;
+    border: 1px solid #84596B;
+    opacity: 50%;
+}
