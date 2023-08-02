@@ -16,76 +16,33 @@
     <body>
         
         <header>
-            <nav>
-                Las recetas de So
+            <nav>Las recetas de So
+                Tu recetario
             </nav>
         </header>
 
         <main>
 
-            <section>
+            <section class="new-recipe-section">
                 <div class="btn-container">
-                    <button class="btn">
+                    <button class="btn" id="new-recipe-btn">
                         <span class="grow">+</span> Nueva receta
                     </button>
                 </div>
+
+                <div id="new-recipe-input-container" class="disabled">
+                    <input id="new-recipe-name-input" class="new-recipe-input" placeholder="Nombre del plato">
+                    <button id="new-recipe-add-btn" class="btn large-btn">Añadir</button>
+                </div>
             </section>
 
-            <section>
+            <section id="recipes-section">
 
-                <div class="recipe-container">
-                    
-                    <h1>Ceviche</h1>
+                <h1 class="welcome-msg">Hola!<br>
+                    Este es el lugar indicado para añadir tus recetas favoritas<br>
+                    👩🏻‍🍳 🧑🏻‍🍳 👨🏻‍🍳
+                </h1>
 
-                    <div class="ingredients">
-                        <div class="header">
-                            <h2>Ingredientes</h2>
-                            <button class="btn"><span class="grow">+</span></button>
-                        </div>
-                        <ul class="ingredients-body">
-                            <li>800g de filete de pescado</li>
-                            <li>1 cebolla roja</li>
-                            <li>1/2 ají limo</li>
-                            <li>1 cda. de culantro</li>
-                            <li>Jugo de 6 limones</li>
-                            <li>Sal al gusto</li>
-                            <li>1 camote sancochado</li>
-                            <li>1 choclo desgranado</li>
-                            <li>Hojas de lechuga fresca</li>
-                        </ul>
-                    </div>
-
-                    <span class="line"></span>
-
-                    <div class="steps">
-                        <div class="header">
-                            <h2>Preparación</h2>
-                            <button class="btn"><span class="grow">+</span></button>
-                        </div>
-                        <ol class="steps-body">
-                            <li>
-                                Lavar el pescado y cortarlo en cubos de 1 a 2 cm de diámetro.
-                                Sazonar con sal y reservar.
-                            </li>
-                            <li>
-                                Colocar los cubos de pescado en un recipiente y agregar el
-                                jugo de limón recién exprimido. El jugo debe cubrir todo el pescado.
-                            </li>
-                            <li>
-                                Incorporar el culantro, cebolla, ají limo al gusto.
-                            </li>
-                            <li>
-                                Mezclar bien los ingredientes y dejar reposar por unos
-                                5 minutos aproximadamente para que los sabores se integren.
-                            </li>
-                            <li>
-                                Servir inmediatamente sobre un plato, colocar el Ceviche al
-                                centro y decorar el plato con una hoja de lechuga, trozos de camote
-                                y choclo. Si desea también puede acompañar con canchita serrana.
-                            </li>
-                        </ol>
-                    </div>
-                </div>
             </section>
 
         </main>
