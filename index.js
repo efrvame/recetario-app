@@ -3,6 +3,7 @@ import { getDatabase, ref, set, push, onValue, remove } from "https://www.gstati
 
 const appSettings = {
     databaseURL: "https://recipes-3cc20-default-rtdb.firebaseio.com/"
+    // https://playground-b3e1b-default-rtdb.firebaseio.com/
 }
 
 const app = initializeApp(appSettings)
@@ -36,7 +37,7 @@ function clearInput (el) {
 
 function addRecipe (recipeName) {
     set (ref(database, 'recipes/' + recipeName), {
-        recipeName: recipeName,
+        /* recipeName: recipeName, */
         ingredients: "",
         steps: ""
     })
