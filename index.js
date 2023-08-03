@@ -46,9 +46,9 @@ function renderRecipeCard(recipeName) {
 
     let recipeCard = document.createElement("div")
     recipeCard.classList.add("recipe-container")
-    recipeCard.innerHTML = `  
+    recipeCard.innerHTML = `
         <h1>${recipeName}</h1>
-
+        <button class="btn close" id="close-btn-${recipeName}">x</button>
         <div class="ingredients">
             <div class="header">
                 <h2>Ingredientes</h2>
@@ -86,15 +86,15 @@ function renderRecipeCard(recipeName) {
 
     recipesSection.append(recipeCard)
 
-    const showIngrInput = document.getElementById("show-ingr-input-"+recipeName)
-    const ingrInputCont = document.getElementById("ingr-input-container-"+recipeName)
+    const showIngrInput = document.getElementById(`show-ingr-input-${recipeName}`)
+    const ingrInputCont = document.getElementById(`ingr-input-container-${recipeName}`)
 
     showIngrInput.addEventListener("click", function() {
         ingrInputCont.classList.toggle("disabled")
     })
 
-    const showStepInput = document.getElementById("show-step-input-"+recipeName)
-    const stepInputCont = document.getElementById("step-input-container-"+recipeName)
+    const showStepInput = document.getElementById(`show-step-input-${recipeName}`)
+    const stepInputCont = document.getElementById(`step-input-container-${recipeName}`)
 
     showStepInput.addEventListener("click", function() {
         stepInputCont.classList.toggle("disabled")
@@ -130,6 +130,14 @@ function renderRecipeCard(recipeName) {
         clearInput(addStepInput)
     })
 
+    const closeBtn = document.getElementById(`close-btn-${recipeName}`)
+
+    closeBtn.addEventListener('click', function(){
+        let recipeLocationOnDB = ref(database, `recipes/${recipeName}/`)
+
+        remove(recipeLocationOnDB)
+    })
+
 }
 
 function appendIngrEl (recipeName, ingredients) {
@@ -137,12 +145,13 @@ function appendIngrEl (recipeName, ingredients) {
 
     for(let i = 0; i < ingredients.length; i++){
         let ingrItem = document.createElement("li")
-        ingrItem.textContent = ingredients[i]
+        ingrItem.textContent = ingredients[i][1]
 
         body.append(ingrItem)
         
-        ingrItem.addEventListener('dblclick', function(){
-            console.log("clicked!")
+        ingrItem.addEventListener('click', function(){
+            let ingrLocationInDB = ref(database, `recipes/${recipeName}/ingredients/${ingredients[i][0]}/`)
+            remove(ingrLocationInDB)
         })
     }
 
@@ -154,12 +163,13 @@ function appendStepEl (recipeName, steps) {
 
     for(let i = 0; i < steps.length; i++){
         let stepItem = document.createElement("li")
-        stepItem.textContent = steps[i]
+        stepItem.textContent = steps[i][1]
 
         body.append(stepItem)
 
-        stepItem.addEventListener('dblclick', function(){
-            console.log("clicked!")
+        stepItem.addEventListener('click', function(){
+            let stepLocationInDB = ref(database, `recipes/${recipeName}/steps/${steps[i][0]}/`)
+            remove(stepLocationInDB)
         })
     }
 }
@@ -185,19 +195,26 @@ onValue (recipesDB, function(snapshot){
 
             if (currentIngredients != undefined){
                 
-                let currentIngredientsArray = Object.values(currentIngredients)
+                let currentIngredientsArray = Object.entries(currentIngredients)
 
                 appendIngrEl(currentRecipeName, currentIngredientsArray)
             }
 
             if(currentSteps != undefined) {
 
-                let currentStepsArray = Object.values(currentSteps)
+                let currentStepsArray = Object.entries(currentSteps)
 
                 appendStepEl(currentRecipeName, currentStepsArray)
             }
 
         }
+    } else {
+        recipesSection.innerHTML = `
+        <h1 class="welcome-msg">Hola!<br>
+            Este es el lugar indicado para añadir tus recetas favoritas<br>
+            👩🏻‍🍳 🧑🏻‍🍳 👨🏻‍🍳
+        </h1>
+        `
     }
 
 })
