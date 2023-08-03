@@ -201,14 +201,19 @@ input, textarea {
 }
 
 .ctd-input, .unit-input {
-    width: 25px;
+    width: 60px;
     text-align: center;
 }
 
 .ingr-input {
-    width: 90px;
+    width: 150px;
 }
 
+@media screen and (max-width: 320px){
+    .ingr-input {
+        width: 110px;
+    }
+}
 .disabled {
     display: none;
 }

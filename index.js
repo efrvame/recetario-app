@@ -58,7 +58,7 @@ function renderRecipeCard(recipeName) {
 
             <div class="input-container disabled" id="ingr-input-container-${recipeName}">
                 <input class="ctd-input" id="ctd-input-${recipeName}" type="text" placeholder="Ctd.">
-                <input class="unit-input" id="unit-input-${recipeName}" type="text" placeholder="Uni">
+                <input class="unit-input" id="unit-input-${recipeName}" type="text" placeholder="Ud.">
                 <input class="ingr-input" id="ingr-input-${recipeName}" type="text" placeholder="Ingrediente">
                 <button class="btn large-btn" id="add-ingr-btn-${recipeName}">Añadir</button>
             </div>
