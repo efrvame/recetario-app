@@ -1,5 +1,10 @@
+html,
 body {
     margin: 0;
+    height: 100%;
+}
+
+body {
     padding: 0;
     font-family: 'Bellota', cursive;
     font-size: 16px;
@@ -38,6 +43,7 @@ h2 {
 }
 
 .welcome-msg{
+    height: 100%;
     text-align: center;
     background-color: whitesmoke;
     padding: 3em 1em;
@@ -90,8 +96,8 @@ main {
     flex-direction: column;
     gap: 1em;
     width: 90%;
-    margin: 0 auto;
-    padding: 1em;
+    margin: 10px auto 0;
+    height: 87%;
 }
 
 nav {
@@ -228,4 +234,5 @@ textarea {
     display: flex;
     flex-direction: column;
     gap: 1.5em;
+    height: 100%;
 }
