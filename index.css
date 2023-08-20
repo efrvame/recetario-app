@@ -20,47 +20,47 @@ h1, h2 {
 }
 
 nav {
-    font-size: 40px;
+    font-size: 2.5rem; /* 40px */
     font-weight: 900;
     color: whitesmoke;
 }
 
 h1 {
-    font-size: 38px;
+    font-size: 2.375rem; /* 38px */
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 1.875rem; /* 30px */
 }
 
 .grow {
-    font-size: 20px;
+    font-size: 1.25rem; /* 20px */
 }
 
 .welcome-msg{
     text-align: center;
     background-color: whitesmoke;
-    padding: 100px 20px;
+    padding: 3em 1em;
     box-sizing: border-box;
-    border-radius: 10px;
+    border-radius: 0.5em;
     box-shadow: 1px 1px 5px;
 }
 
 /* Links and buttons */
 
 .btn {
-    padding: 8px 12px;
+    padding: 0.5em 1em;
     border: none;
-    border-radius: 10px;
+    border-radius: 0.5em;
     background: #603A40;
     color: whitesmoke;
     font-weight: 600;
-    font-size: 16px;
+    font-size: 1rem;
     cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
+    gap: 0.5em;
 }
 
 .btn:hover, .btn:focus {
@@ -82,21 +82,21 @@ h2 {
 /* Layout */
 
 .logo {
-    height: 100px;
+    height: 6em;
 }
 
 main {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    max-width: 320px;
+    gap: 1em;
+    width: 90%;
     margin: 0 auto;
-    padding: 20px;
+    padding: 1em;
 }
 
 nav {
     text-align: center;
-    padding: 20px 0;
+    padding: 0.5em 0;
     background-color: #84596B;
     box-shadow: 0px 1px 5px #84596B;
 }
@@ -113,11 +113,11 @@ nav {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px;
-    gap: 20px;
+    padding: 1em;
+    gap: 1em;
     box-shadow: 1px 1px 5px #84596B;
     background-color: #AF9BB6;
-    border-radius: 10px;
+    border-radius: 0.5em;
 }
 
 .recipe-container h1 {
@@ -129,7 +129,7 @@ nav {
 }
 
 ul, ol {
-    margin: 15px 0 0 0;
+    margin: 1em 0 0 0;
 }
 
 ul {
@@ -138,12 +138,12 @@ ul {
     list-style: none;
     display: flex;
     flex-wrap: wrap;
-    gap: 10px 8px;
+    gap: 0.7em 0.5em;
 }
 
 ul li,
 ol li {
-    border-radius: 10px;
+    border-radius: 0.5em;
     box-shadow: 1px 1px 5px #440D0F;
     background-color: whitesmoke;
     font-weight: 600;
@@ -151,27 +151,27 @@ ol li {
 }
 
 ul li {
-    padding: 10px 8px;
+    padding: 0.5em 0.6em;
 }
 
 ol {
     box-sizing: border-box;
-    padding: 0 0 0 15px;
+    padding: 0 0 0 1em;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 0.625em;
 }
 
 ol li {
     box-sizing: border-box;
-    padding: 10px 15px;
+    padding: 0.5em 1em;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 15px;
+    margin-bottom: 1em;
 }
 
 .line {
@@ -182,10 +182,10 @@ ol li {
 
 input, textarea {
     border: none;
-    border-radius: 10px;
-    padding: 10px 15px;
+    border-radius: 0.5em;
+    padding: 0.5em 1em;
     box-sizing: border-box;
-    font-size: 16px;
+    font-size: 1rem;
     font-family: 'Bellota', cursive;
     font-weight: 600;
     color: #603A40;
@@ -196,24 +196,19 @@ input, textarea {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    gap: 8px 3px;
+    gap: 0.5em;
     width: 100%;
 }
 
 .ctd-input, .unit-input {
-    width: 60px;
+    width: 20%;
     text-align: center;
 }
 
 .ingr-input {
-    width: 150px;
+    width: 53%;
 }
 
-@media screen and (max-width: 320px){
-    .ingr-input {
-        width: 110px;
-    }
-}
 .disabled {
     display: none;
 }
@@ -221,7 +216,7 @@ input, textarea {
 .new-recipe-input, textarea{
     width: 100%;
     box-sizing: border-box;
-    margin: 15px 0 5px 0;
+    margin: 1em 0 0.5em 0;
 }
 
 textarea {
@@ -232,5 +227,5 @@ textarea {
 #recipes-section {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 1.5em;
 }
