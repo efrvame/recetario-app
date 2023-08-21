@@ -2,8 +2,8 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, set, push, onValue, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js"
 
 const appSettings = {
-    // databaseURL: "https://playground-b3e1b-default-rtdb.firebaseio.com/"
-    databaseURL: "https://recipes-3cc20-default-rtdb.firebaseio.com/"
+    databaseURL: "https://playground-b3e1b-default-rtdb.firebaseio.com/"
+    // databaseURL: "https://recipes-3cc20-default-rtdb.firebaseio.com/"
 }
 
 const app = initializeApp(appSettings)

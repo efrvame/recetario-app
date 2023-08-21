@@ -6,7 +6,6 @@
         
         <!-- CSS -->
         <link rel="stylesheet" href="index.css">
-        <link rel="stylesheet" href="splash.css">
 
         <!-- Meta viewport -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,26 +33,24 @@
         </header>
 
         <main>
-            <section class="intro">
-                <h1>
-                    Todas tus <strong>recetas favoritas</strong> en un solo lugar!
-                </h1>
-                <span class="beta-text">Ahora en beta</span>
-                <p class="top-text">Powered by efrvame</p>
+
+            <section class="new-recipe-section">
+                <div class="btn-container">
+                    <button class="btn" id="new-recipe-btn">
+                        <span class="grow">+</span> Nueva receta
+                    </button>
+                </div>
+
+                <div id="new-recipe-input-container" class="disabled">
+                    <input id="new-recipe-name-input" class="new-recipe-input" placeholder="Nombre del plato">
+                    <button id="new-recipe-add-btn" class="btn large-btn">Añadir</button>
+                </div>
             </section>
 
-            <section class="main-content">
-                <h2>Tu Recetario</h2>
-                <span class="subheading">¿No sabes qué cocinar?</span>
-                <p>
-                    Ya no busques más, en Tu Recetario puedes almacenar las recetas
-                    que más te gustan, compartirlas con tus amigos y reaccionar a
-                    todas las recetas de la comunidad!
-                </p>
+            <section id="recipes-section">
 
-                <a href="login.html" class="btn btn-primary">Iniciar sesión</a>
-                <a href="signup.html" class="btn btn-secondary">Registrarme</a>
             </section>
+
         </main>
 
         <script src="index.js" type="module"></script>

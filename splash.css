@@ -1,0 +1,120 @@
+body {
+    background-color: white;
+}
+
+main {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+}
+
+h1 {
+    color: white;
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.intro {
+    justify-content: space-between;
+    
+    min-height: 40vh;
+    
+    color: white;
+    text-align: center;
+    text-shadow: 2px 0 #301e21;
+    
+    background-image: url(assets/images/splash-bg.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.top-text{
+    order: -1;
+    margin: 0;
+}
+
+.beta-text,
+.top-text {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: white;
+}
+
+.intro, .main-content {
+    display: flex;
+    flex-direction: column;
+    
+    padding: 0.5em 2em;
+}
+
+.main-content {
+    align-items: center;
+    justify-content: center;
+    margin-top: 1em;
+
+}
+
+.subheading {
+    font-size: 1.25rem;
+    font-weight: 900;
+    margin-top: 0.5em;
+}
+
+.main-content p {
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: black;
+}
+
+.btn{
+    width: 100%;
+    margin-bottom: 0.5em;
+    border: 1px solid;
+    padding: 1em;
+}
+
+.btn-secondary {
+    background-color: transparent;
+    color: #603A40;
+    border: 1px solid #603A40;
+}
+
+@media (min-width:768px) {
+    main {
+        flex-direction: row;
+    }
+
+    h1 {
+        font-size: 5vw;
+    }
+
+    h2 {
+        font-size: 4vw;
+    }
+
+    .subheading {
+        font-size: 1.3vw;
+    }
+
+    .intro, .main-content {
+        flex: 1;
+    }
+
+    .main-content {
+        margin: 0;
+    }
+
+    .main-content p, a {
+        max-width: 450px;
+    }
+
+    .btn {
+        font-size: 1.125rem;
+    }
+}
