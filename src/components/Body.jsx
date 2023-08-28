@@ -1,5 +1,15 @@
+import Recipe from "../components/Recipe.jsx";
+
+import "../styles/Body.css";
+
 function Body() {
-    return <h1>Body</h1>;
+    return (
+        <section>
+            <div className="container">
+                <Recipe />
+            </div>
+        </section>
+    );
 }
 
 export default Body;

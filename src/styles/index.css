@@ -3,27 +3,42 @@
 }
 
 body {
-    height: 100vh;
+    height: 100%;
     margin: 0;
     font-family: "Bellota", cursive;
+    font-size: 1.125rem;
 }
 
 h1,
 h2,
-.navbar {
-    font-family: "Meow Script", cursive;
+h3,
+p,
+nav {
     margin: 0;
 }
 
-header {
-    background: linear-gradient(#a13e67, #b56385);
-    padding: 0.5em 0;
+h1,
+h2,
+nav {
+    font-family: "Meow Script", cursive;
 }
 
-.navbar {
-    text-align: center;
+#root {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 
-    font-size: 1.75rem; /* 28px */
-    font-weight: 400;
-    color: white;
+    height: 100vh;
+    background-color: rgb(250, 233, 233);
+}
+
+section {
+    display: flex;
+    flex: 1;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    padding: 0.5em 1em;
 }

@@ -1,0 +1,33 @@
+.recipe-card {
+    width: 100%;
+    padding: 1em 2em;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: 1px 0 5px black;
+}
+
+.recipe-title {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.recipe-ingredients {
+    font-size: 1.125rem;
+}
+
+.recipe-ingredients > ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+    padding: 0;
+    margin: 0;
+    border: 1px solid salmon;
+    list-style: none;
+}
+
+.recipe-ingredients > ul > li {
+    padding: 0.5em 1em;
+    border-radius: 0.5em;
+    background-color: cornsilk;
+    border: 1px solid tomato;
+}

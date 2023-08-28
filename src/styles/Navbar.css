@@ -1,0 +1,12 @@
+header {
+    background: linear-gradient(#a13e67, #b56385);
+    padding: 0.5em 0;
+}
+
+.navbar {
+    text-align: center;
+
+    font-size: 1.75rem; /* 28px */
+    font-weight: 400;
+    color: white;
+}
